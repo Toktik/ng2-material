@@ -1,13 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-/dist
-/tmp
-public/font/font.css
-public/font/font.css.map
-src/all.css
-src/all.css.map
-
 # dependencies
 /node_modules
 /modules/*/node_modules
@@ -26,10 +18,6 @@ src/all.css.map
 /libpeerconnection.log
 npm-debug.log
 testem.log
-
-# e2e
-/e2e/*.js
-/e2e/*.map
 
 #System Files
 .DS_Store
