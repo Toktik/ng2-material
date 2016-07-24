@@ -27,8 +27,6 @@ import {MdSwitch} from "./components/switch/switch";
 import {MdSubheader} from "./components/subheader/subheader";
 import {Media} from "./core/util/media";
 import {ViewportHelper, BrowserViewportHelper, NodeViewportHelper} from "./core/util/viewport";
-import {OVERLAY_CONTAINER_TOKEN} from "@angular2-material/core/overlay/overlay";
-import {createOverlayContainer} from "@angular2-material/core/overlay/overlay-container";
 import {MdBackdrop} from "./components/backdrop/backdrop";
 
 export * from './components/button/button';
@@ -102,9 +100,7 @@ export const MATERIAL_NODE_PROVIDERS: any[] = [
  */
 export const MATERIAL_BROWSER_PROVIDERS: any[] = [
   ...MATERIAL_NODE_PROVIDERS,
-  {provide: ViewportHelper, useClass: BrowserViewportHelper},
-  // TODO(jd): should this be here? Or in the example app bootstrap?
-  {provide: OVERLAY_CONTAINER_TOKEN, useValue: createOverlayContainer()},
+  {provide: ViewportHelper, useClass: BrowserViewportHelper}
 ];
 
 

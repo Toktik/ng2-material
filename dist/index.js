@@ -18,8 +18,6 @@ var switch_1 = require("./components/switch/switch");
 var subheader_1 = require("./components/subheader/subheader");
 var media_1 = require("./core/util/media");
 var viewport_1 = require("./core/util/viewport");
-var overlay_1 = require("@angular2-material/core/overlay/overlay");
-var overlay_container_1 = require("@angular2-material/core/overlay/overlay-container");
 var backdrop_1 = require("./components/backdrop/backdrop");
 __export(require('./components/button/button'));
 __export(require('./components/backdrop/backdrop'));
@@ -65,8 +63,7 @@ exports.MATERIAL_NODE_PROVIDERS = [
     index_3.PaginationService
 ].concat(validators_1.INPUT_VALIDATORS);
 exports.MATERIAL_BROWSER_PROVIDERS = exports.MATERIAL_NODE_PROVIDERS.concat([
-    { provide: viewport_1.ViewportHelper, useClass: viewport_1.BrowserViewportHelper },
-    { provide: overlay_1.OVERLAY_CONTAINER_TOKEN, useValue: overlay_container_1.createOverlayContainer() },
+    { provide: viewport_1.ViewportHelper, useClass: viewport_1.BrowserViewportHelper }
 ]);
 exports.MATERIAL_PROVIDERS = exports.MATERIAL_BROWSER_PROVIDERS;
 //# sourceMappingURL=index.js.map
